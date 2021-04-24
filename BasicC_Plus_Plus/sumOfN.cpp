@@ -17,27 +17,28 @@ Array = 6 3 8
 Sample Output:
 17
 */
-#include <stdio.h>
+#include <iostream>
+using namespace std;
  
 int main(void) {
     
 	int N, i;
-	scanf("%d", &N);
+	cin >> N;
  
 	int numArray[N]; // Define an array of four integers
     
 	// Get inputs for the array elements
 	for (i=0;i<N; i++) {
-    	scanf("%d", &numArray[i]);
+    	cin >> numArray[i];
 	}
 	
 	int sum = 0;
 	// Write here the logic to add these integers:
+        for (int j=0;j<N; j++) {
+    	sum=sum+numArray[j];
+	}
     
-    
-    
-   
-	printf("%d\n",sum);  // Print the sum
+       cout << sum << endl;  // Print the sum
     
 	return 0;
 }
